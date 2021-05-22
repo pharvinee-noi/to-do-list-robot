@@ -1,0 +1,6 @@
+pyyaml==3.10
+robotframework-seleniumlibrary==3.3.1
+robotframework-selenium2library==3.0.0
+selenium==3.141.0
+robotframework-stringformat==0.1.8
+more-itertools==5.0.0

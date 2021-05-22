@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.8.7 on darwin)" generated="20210522 20:21:53.597" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcases" source="/Users/phavineenoi-ay/Documents/GitHub/to-do-list-robot/testcases">
+<suite id="s1-s1" name="Todo List Website" source="/Users/phavineenoi-ay/Documents/GitHub/to-do-list-robot/testcases/todo_list_website.robot">
+<kw name="Open Browser" library="Selenium2Library" type="SETUP">
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20210522 20:21:53.803" level="TRACE">Arguments: [ 'https://abhigyank.github.io/To-Do-List/' | 'headlesschrome' ]</msg>
+<msg timestamp="20210522 20:21:53.803" level="INFO">Opening browser 'headlesschrome' to base url 'https://abhigyank.github.io/To-Do-List/'.</msg>
+<msg timestamp="20210522 20:21:54.828" level="DEBUG">POST http://127.0.0.1:58368/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": ["--headless"]}}}</msg>
+<msg timestamp="20210522 20:21:54.830" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:58368</msg>
+<msg timestamp="20210522 20:21:55.431" level="DEBUG">http://127.0.0.1:58368 "POST /session HTTP/1.1" 200 763</msg>
+<msg timestamp="20210522 20:21:55.432" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:55.432" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/timeouts {"script": 5000}</msg>
+<msg timestamp="20210522 20:21:55.434" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:55.434" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:55.434" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/timeouts {"implicit": 0}</msg>
+<msg timestamp="20210522 20:21:55.435" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:55.435" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:55.435" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {"url": "https://abhigyank.github.io/To-Do-List/"}</msg>
+<msg timestamp="20210522 20:21:57.567" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.568" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.568" level="DEBUG">Opened browser with session id ab84623b1f4fb9d0168aa9ecc96bb9bf.</msg>
+<msg timestamp="20210522 20:21:57.568" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20210522 20:21:53.802" endtime="20210522 20:21:57.568"/>
+</kw>
+<test id="s1-s1-t1" name="Test add item web with thai">
+<kw name="Given Click Link" library="Selenium2Library">
+<arg>Add Item</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.571" level="TRACE">Arguments: [ 'Add Item' ]</msg>
+<msg timestamp="20210522 20:21:57.571" level="INFO">Clicking link 'Add Item'.</msg>
+<msg timestamp="20210522 20:21:57.571" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:57.576" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:57.576" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.576" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='Add Item' or @name='Add Item' or @href='Add Item' or normalize-space(descendant-or-self::text())='Add Item' or @href='https://abhigyank.github.io/To-Do-List/Add Item')]"}</msg>
+<msg timestamp="20210522 20:21:57.586" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.586" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.587" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/929a08f6-7e3b-4a73-b713-b2504eb16862/click {"id": "929a08f6-7e3b-4a73-b713-b2504eb16862"}</msg>
+<msg timestamp="20210522 20:21:57.628" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/929a08f6-7e3b-4a73-b713-b2504eb16862/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.628" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.628" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.570" endtime="20210522 20:21:57.628"/>
+</kw>
+<kw name="And Input Text" library="Selenium2Library">
+<arg>id=new-task</arg>
+<arg>ทดสอบภาษาไทย</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.629" level="TRACE">Arguments: [ 'id=new-task' | 'ทดสอบภาษาไทย' ]</msg>
+<msg timestamp="20210522 20:21:57.631" level="INFO">Typing text 'ทดสอบภาษาไทย' into text field 'id=new-task'.</msg>
+<msg timestamp="20210522 20:21:57.631" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"new-task\"]"}</msg>
+<msg timestamp="20210522 20:21:57.638" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.639" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.639" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/clear {"id": "79a4ef48-0b10-48c6-81dd-420c29298b5e"}</msg>
+<msg timestamp="20210522 20:21:57.660" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.660" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.660" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/value {"text": "\u0e17\u0e14\u0e2a\u0e2d\u0e1a\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22", "value": ["\u0e17", "\u0e14", "\u0e2a", "\u0e2d", "\u0e1a", "\u0e20", "\u0e32", "\u0e29", "\u0e32", "\u0e44", "\u0e17", "\u0e22"], "id": "79a4ef48-0b10-48c6-81dd-420c29298b5e"}</msg>
+<msg timestamp="20210522 20:21:57.753" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.754" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.754" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.628" endtime="20210522 20:21:57.754"/>
+</kw>
+<kw name="When Click Element" library="Selenium2Library">
+<arg>//button</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.754" level="TRACE">Arguments: [ '//button' ]</msg>
+<msg timestamp="20210522 20:21:57.754" level="INFO">Clicking element '//button'.</msg>
+<msg timestamp="20210522 20:21:57.755" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//button"}</msg>
+<msg timestamp="20210522 20:21:57.761" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.762" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.762" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0c45c48d-131d-4f86-b37f-cde0caf01dde/click {"id": "0c45c48d-131d-4f86-b37f-cde0caf01dde"}</msg>
+<msg timestamp="20210522 20:21:57.782" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0c45c48d-131d-4f86-b37f-cde0caf01dde/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.783" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.783" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.754" endtime="20210522 20:21:57.783"/>
+</kw>
+<kw name="Then Click Link" library="Selenium2Library">
+<arg>To-Do Tasks</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.783" level="TRACE">Arguments: [ 'To-Do Tasks' ]</msg>
+<msg timestamp="20210522 20:21:57.783" level="INFO">Clicking link 'To-Do Tasks'.</msg>
+<msg timestamp="20210522 20:21:57.783" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:57.786" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:57.786" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.786" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='To-Do Tasks' or @name='To-Do Tasks' or @href='To-Do Tasks' or normalize-space(descendant-or-self::text())='To-Do Tasks' or @href='https://abhigyank.github.io/To-Do-List/To-Do Tasks')]"}</msg>
+<msg timestamp="20210522 20:21:57.794" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.794" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.794" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click {"id": "6a6b5db5-2d15-4d1c-be56-b598cc63ecf3"}</msg>
+<msg timestamp="20210522 20:21:57.818" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.818" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.818" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.783" endtime="20210522 20:21:57.818"/>
+</kw>
+<kw name="And Assert to-do-task 'id=text-1' should be display 'ทดสอบภาษาไทย'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:57.819" level="TRACE">Arguments: [ ${element}='id=text-1' | ${expeted}='ทดสอบภาษาไทย' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.819" level="TRACE">Arguments: [ 'id=text-1' ]</msg>
+<msg timestamp="20210522 20:21:57.819" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-1\"]"}</msg>
+<msg timestamp="20210522 20:21:57.826" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.826" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.826" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/d3dd535e-7fbf-4848-ae6b-0741207c0662/text {"id": "d3dd535e-7fbf-4848-ae6b-0741207c0662"}</msg>
+<msg timestamp="20210522 20:21:57.834" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/d3dd535e-7fbf-4848-ae6b-0741207c0662/text HTTP/1.1" 200 48</msg>
+<msg timestamp="20210522 20:21:57.835" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.835" level="TRACE">Return: 'ทดสอบภาษาไทย'</msg>
+<msg timestamp="20210522 20:21:57.835" level="INFO">${actual} = ทดสอบภาษาไทย</msg>
+<status status="PASS" starttime="20210522 20:21:57.819" endtime="20210522 20:21:57.835"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:57.835" level="TRACE">Arguments: [ 'ทดสอบภาษาไทย' | 'ทดสอบภาษาไทย' ]</msg>
+<msg timestamp="20210522 20:21:57.835" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:57.835" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.835" endtime="20210522 20:21:57.835"/>
+</kw>
+<msg timestamp="20210522 20:21:57.836" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.818" endtime="20210522 20:21:57.836"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:57.569" endtime="20210522 20:21:57.836"/>
+</test>
+<test id="s1-s1-t2" name="Test add item web with eng">
+<kw name="Given Click Link" library="Selenium2Library">
+<arg>Add Item</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.837" level="TRACE">Arguments: [ 'Add Item' ]</msg>
+<msg timestamp="20210522 20:21:57.837" level="INFO">Clicking link 'Add Item'.</msg>
+<msg timestamp="20210522 20:21:57.837" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:57.839" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:57.840" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.840" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='Add Item' or @name='Add Item' or @href='Add Item' or normalize-space(descendant-or-self::text())='Add Item' or @href='https://abhigyank.github.io/To-Do-List/Add Item')]"}</msg>
+<msg timestamp="20210522 20:21:57.843" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.844" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.844" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/929a08f6-7e3b-4a73-b713-b2504eb16862/click {"id": "929a08f6-7e3b-4a73-b713-b2504eb16862"}</msg>
+<msg timestamp="20210522 20:21:57.856" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/929a08f6-7e3b-4a73-b713-b2504eb16862/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.856" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.856" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.837" endtime="20210522 20:21:57.856"/>
+</kw>
+<kw name="And Input Text" library="Selenium2Library">
+<arg>id=new-task</arg>
+<arg>Test English</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.857" level="TRACE">Arguments: [ 'id=new-task' | 'Test English' ]</msg>
+<msg timestamp="20210522 20:21:57.857" level="INFO">Typing text 'Test English' into text field 'id=new-task'.</msg>
+<msg timestamp="20210522 20:21:57.857" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"new-task\"]"}</msg>
+<msg timestamp="20210522 20:21:57.861" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.861" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.861" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/clear {"id": "79a4ef48-0b10-48c6-81dd-420c29298b5e"}</msg>
+<msg timestamp="20210522 20:21:57.872" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.872" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.872" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/value {"text": "Test English", "value": ["T", "e", "s", "t", " ", "E", "n", "g", "l", "i", "s", "h"], "id": "79a4ef48-0b10-48c6-81dd-420c29298b5e"}</msg>
+<msg timestamp="20210522 20:21:57.894" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.895" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.895" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.856" endtime="20210522 20:21:57.895"/>
+</kw>
+<kw name="When Click Element" library="Selenium2Library">
+<arg>//button</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.895" level="TRACE">Arguments: [ '//button' ]</msg>
+<msg timestamp="20210522 20:21:57.895" level="INFO">Clicking element '//button'.</msg>
+<msg timestamp="20210522 20:21:57.895" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//button"}</msg>
+<msg timestamp="20210522 20:21:57.899" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 169</msg>
+<msg timestamp="20210522 20:21:57.899" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.899" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0c45c48d-131d-4f86-b37f-cde0caf01dde/click {"id": "0c45c48d-131d-4f86-b37f-cde0caf01dde"}</msg>
+<msg timestamp="20210522 20:21:57.914" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0c45c48d-131d-4f86-b37f-cde0caf01dde/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.914" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.914" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.895" endtime="20210522 20:21:57.914"/>
+</kw>
+<kw name="Then Click Link" library="Selenium2Library">
+<arg>To-Do Tasks</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.914" level="TRACE">Arguments: [ 'To-Do Tasks' ]</msg>
+<msg timestamp="20210522 20:21:57.915" level="INFO">Clicking link 'To-Do Tasks'.</msg>
+<msg timestamp="20210522 20:21:57.915" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:57.917" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:57.917" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.918" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='To-Do Tasks' or @name='To-Do Tasks' or @href='To-Do Tasks' or normalize-space(descendant-or-self::text())='To-Do Tasks' or @href='https://abhigyank.github.io/To-Do-List/To-Do Tasks')]"}</msg>
+<msg timestamp="20210522 20:21:57.922" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.922" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.923" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click {"id": "6a6b5db5-2d15-4d1c-be56-b598cc63ecf3"}</msg>
+<msg timestamp="20210522 20:21:57.934" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.934" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.934" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.914" endtime="20210522 20:21:57.935"/>
+</kw>
+<kw name="And Assert to-do-task 'id=text-2' should be display 'Test English'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:57.935" level="TRACE">Arguments: [ ${element}='id=text-2' | ${expeted}='Test English' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.936" level="TRACE">Arguments: [ 'id=text-2' ]</msg>
+<msg timestamp="20210522 20:21:57.936" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-2\"]"}</msg>
+<msg timestamp="20210522 20:21:57.943" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.943" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.943" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0012dbce-676b-4167-9daf-b1325116fdaa/text {"id": "0012dbce-676b-4167-9daf-b1325116fdaa"}</msg>
+<msg timestamp="20210522 20:21:57.951" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0012dbce-676b-4167-9daf-b1325116fdaa/text HTTP/1.1" 200 24</msg>
+<msg timestamp="20210522 20:21:57.951" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.952" level="TRACE">Return: 'Test English'</msg>
+<msg timestamp="20210522 20:21:57.952" level="INFO">${actual} = Test English</msg>
+<status status="PASS" starttime="20210522 20:21:57.935" endtime="20210522 20:21:57.952"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:57.952" level="TRACE">Arguments: [ 'Test English' | 'Test English' ]</msg>
+<msg timestamp="20210522 20:21:57.952" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:57.952" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.952" endtime="20210522 20:21:57.952"/>
+</kw>
+<msg timestamp="20210522 20:21:57.953" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.935" endtime="20210522 20:21:57.953"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:57.836" endtime="20210522 20:21:57.953"/>
+</test>
+<test id="s1-s1-t3" name="Test add item web with spacial char">
+<kw name="Given Click Link" library="Selenium2Library">
+<arg>Add Item</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.954" level="TRACE">Arguments: [ 'Add Item' ]</msg>
+<msg timestamp="20210522 20:21:57.954" level="INFO">Clicking link 'Add Item'.</msg>
+<msg timestamp="20210522 20:21:57.954" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:57.957" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:57.957" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.957" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='Add Item' or @name='Add Item' or @href='Add Item' or normalize-space(descendant-or-self::text())='Add Item' or @href='https://abhigyank.github.io/To-Do-List/Add Item')]"}</msg>
+<msg timestamp="20210522 20:21:57.961" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.961" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.962" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/929a08f6-7e3b-4a73-b713-b2504eb16862/click {"id": "929a08f6-7e3b-4a73-b713-b2504eb16862"}</msg>
+<msg timestamp="20210522 20:21:57.973" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/929a08f6-7e3b-4a73-b713-b2504eb16862/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.974" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.974" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.954" endtime="20210522 20:21:57.974"/>
+</kw>
+<kw name="And Input Text" library="Selenium2Library">
+<arg>id=new-task</arg>
+<arg>!@#$%</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:57.974" level="TRACE">Arguments: [ 'id=new-task' | '!@#$%' ]</msg>
+<msg timestamp="20210522 20:21:57.974" level="INFO">Typing text '!@#$%' into text field 'id=new-task'.</msg>
+<msg timestamp="20210522 20:21:57.974" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"new-task\"]"}</msg>
+<msg timestamp="20210522 20:21:57.979" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:57.979" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.979" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/clear {"id": "79a4ef48-0b10-48c6-81dd-420c29298b5e"}</msg>
+<msg timestamp="20210522 20:21:57.990" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:57.990" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:57.990" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/value {"text": "!@#$%", "value": ["!", "@", "#", "$", "%"], "id": "79a4ef48-0b10-48c6-81dd-420c29298b5e"}</msg>
+<msg timestamp="20210522 20:21:58.010" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/79a4ef48-0b10-48c6-81dd-420c29298b5e/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.010" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.010" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:57.974" endtime="20210522 20:21:58.010"/>
+</kw>
+<kw name="When Click Element" library="Selenium2Library">
+<arg>//button</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.010" level="TRACE">Arguments: [ '//button' ]</msg>
+<msg timestamp="20210522 20:21:58.010" level="INFO">Clicking element '//button'.</msg>
+<msg timestamp="20210522 20:21:58.011" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//button"}</msg>
+<msg timestamp="20210522 20:21:58.014" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 248</msg>
+<msg timestamp="20210522 20:21:58.014" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.015" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0c45c48d-131d-4f86-b37f-cde0caf01dde/click {"id": "0c45c48d-131d-4f86-b37f-cde0caf01dde"}</msg>
+<msg timestamp="20210522 20:21:58.026" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/0c45c48d-131d-4f86-b37f-cde0caf01dde/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.026" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.026" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.010" endtime="20210522 20:21:58.027"/>
+</kw>
+<kw name="Then Click Link" library="Selenium2Library">
+<arg>To-Do Tasks</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.027" level="TRACE">Arguments: [ 'To-Do Tasks' ]</msg>
+<msg timestamp="20210522 20:21:58.027" level="INFO">Clicking link 'To-Do Tasks'.</msg>
+<msg timestamp="20210522 20:21:58.027" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:58.029" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:58.029" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.029" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='To-Do Tasks' or @name='To-Do Tasks' or @href='To-Do Tasks' or normalize-space(descendant-or-self::text())='To-Do Tasks' or @href='https://abhigyank.github.io/To-Do-List/To-Do Tasks')]"}</msg>
+<msg timestamp="20210522 20:21:58.033" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.033" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.034" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click {"id": "6a6b5db5-2d15-4d1c-be56-b598cc63ecf3"}</msg>
+<msg timestamp="20210522 20:21:58.048" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.048" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.048" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.027" endtime="20210522 20:21:58.048"/>
+</kw>
+<kw name="And Assert to-do-task 'id=text-3' should be display '!@#$%'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:58.049" level="TRACE">Arguments: [ ${element}='id=text-3' | ${expeted}='!@#$%' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.049" level="TRACE">Arguments: [ 'id=text-3' ]</msg>
+<msg timestamp="20210522 20:21:58.049" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-3\"]"}</msg>
+<msg timestamp="20210522 20:21:58.057" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.058" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.058" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/35ab2e2d-5213-4a5d-9808-bffc5376290a/text {"id": "35ab2e2d-5213-4a5d-9808-bffc5376290a"}</msg>
+<msg timestamp="20210522 20:21:58.066" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/35ab2e2d-5213-4a5d-9808-bffc5376290a/text HTTP/1.1" 200 17</msg>
+<msg timestamp="20210522 20:21:58.066" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.066" level="TRACE">Return: '!@#$%'</msg>
+<msg timestamp="20210522 20:21:58.066" level="INFO">${actual} = !@#$%</msg>
+<status status="PASS" starttime="20210522 20:21:58.049" endtime="20210522 20:21:58.066"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:58.067" level="TRACE">Arguments: [ '!@#$%' | '!@#$%' ]</msg>
+<msg timestamp="20210522 20:21:58.067" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:58.067" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.066" endtime="20210522 20:21:58.067"/>
+</kw>
+<msg timestamp="20210522 20:21:58.067" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.049" endtime="20210522 20:21:58.067"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:57.953" endtime="20210522 20:21:58.067"/>
+</test>
+<test id="s1-s1-t4" name="Test delete todo list">
+<kw name="Given Click Link" library="Selenium2Library">
+<arg>To-Do Tasks</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.069" level="TRACE">Arguments: [ 'To-Do Tasks' ]</msg>
+<msg timestamp="20210522 20:21:58.069" level="INFO">Clicking link 'To-Do Tasks'.</msg>
+<msg timestamp="20210522 20:21:58.070" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:58.072" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:58.072" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.072" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='To-Do Tasks' or @name='To-Do Tasks' or @href='To-Do Tasks' or normalize-space(descendant-or-self::text())='To-Do Tasks' or @href='https://abhigyank.github.io/To-Do-List/To-Do Tasks')]"}</msg>
+<msg timestamp="20210522 20:21:58.076" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.076" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.076" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click {"id": "6a6b5db5-2d15-4d1c-be56-b598cc63ecf3"}</msg>
+<msg timestamp="20210522 20:21:58.089" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.089" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.089" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.069" endtime="20210522 20:21:58.089"/>
+</kw>
+<kw name="When Click Element" library="Selenium2Library">
+<arg>//button[@id='1']</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.090" level="TRACE">Arguments: [ "//button[@id='1']" ]</msg>
+<msg timestamp="20210522 20:21:58.090" level="INFO">Clicking element '//button[@id='1']'.</msg>
+<msg timestamp="20210522 20:21:58.090" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//button[@id='1']"}</msg>
+<msg timestamp="20210522 20:21:58.096" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.097" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.097" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/8d3b8567-61d9-4feb-874a-020356a57bb2/click {"id": "8d3b8567-61d9-4feb-874a-020356a57bb2"}</msg>
+<msg timestamp="20210522 20:21:58.121" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/8d3b8567-61d9-4feb-874a-020356a57bb2/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.121" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.121" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.089" endtime="20210522 20:21:58.121"/>
+</kw>
+<kw name="Then Assert to-do-task 'id=text-1' should be display 'Test English'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:58.122" level="TRACE">Arguments: [ ${element}='id=text-1' | ${expeted}='Test English' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.122" level="TRACE">Arguments: [ 'id=text-1' ]</msg>
+<msg timestamp="20210522 20:21:58.123" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-1\"]"}</msg>
+<msg timestamp="20210522 20:21:58.126" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.127" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.127" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/9199d74d-f929-4df8-8c70-fc8b56bbd7d0/text {"id": "9199d74d-f929-4df8-8c70-fc8b56bbd7d0"}</msg>
+<msg timestamp="20210522 20:21:58.135" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/9199d74d-f929-4df8-8c70-fc8b56bbd7d0/text HTTP/1.1" 200 24</msg>
+<msg timestamp="20210522 20:21:58.135" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.135" level="TRACE">Return: 'Test English'</msg>
+<msg timestamp="20210522 20:21:58.135" level="INFO">${actual} = Test English</msg>
+<status status="PASS" starttime="20210522 20:21:58.122" endtime="20210522 20:21:58.135"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:58.136" level="TRACE">Arguments: [ 'Test English' | 'Test English' ]</msg>
+<msg timestamp="20210522 20:21:58.136" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:58.136" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.136" endtime="20210522 20:21:58.136"/>
+</kw>
+<msg timestamp="20210522 20:21:58.136" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.122" endtime="20210522 20:21:58.136"/>
+</kw>
+<kw name="And Assert to-do-task 'id=text-2' should be display '!@#$%'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:58.137" level="TRACE">Arguments: [ ${element}='id=text-2' | ${expeted}='!@#$%' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.137" level="TRACE">Arguments: [ 'id=text-2' ]</msg>
+<msg timestamp="20210522 20:21:58.137" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-2\"]"}</msg>
+<msg timestamp="20210522 20:21:58.141" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.141" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.141" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/240e68e9-202f-46ae-be91-6daf34ed9094/text {"id": "240e68e9-202f-46ae-be91-6daf34ed9094"}</msg>
+<msg timestamp="20210522 20:21:58.150" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/240e68e9-202f-46ae-be91-6daf34ed9094/text HTTP/1.1" 200 17</msg>
+<msg timestamp="20210522 20:21:58.150" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.150" level="TRACE">Return: '!@#$%'</msg>
+<msg timestamp="20210522 20:21:58.151" level="INFO">${actual} = !@#$%</msg>
+<status status="PASS" starttime="20210522 20:21:58.137" endtime="20210522 20:21:58.151"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:58.151" level="TRACE">Arguments: [ '!@#$%' | '!@#$%' ]</msg>
+<msg timestamp="20210522 20:21:58.151" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:58.151" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.151" endtime="20210522 20:21:58.151"/>
+</kw>
+<msg timestamp="20210522 20:21:58.152" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.136" endtime="20210522 20:21:58.152"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:58.069" endtime="20210522 20:21:58.152"/>
+</test>
+<test id="s1-s1-t5" name="Test todo list">
+<kw name="Given Click Link" library="Selenium2Library">
+<arg>To-Do Tasks</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.153" level="TRACE">Arguments: [ 'To-Do Tasks' ]</msg>
+<msg timestamp="20210522 20:21:58.153" level="INFO">Clicking link 'To-Do Tasks'.</msg>
+<msg timestamp="20210522 20:21:58.154" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:58.156" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:58.156" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.156" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='To-Do Tasks' or @name='To-Do Tasks' or @href='To-Do Tasks' or normalize-space(descendant-or-self::text())='To-Do Tasks' or @href='https://abhigyank.github.io/To-Do-List/To-Do Tasks')]"}</msg>
+<msg timestamp="20210522 20:21:58.160" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.161" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.161" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click {"id": "6a6b5db5-2d15-4d1c-be56-b598cc63ecf3"}</msg>
+<msg timestamp="20210522 20:21:58.177" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.177" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.178" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.153" endtime="20210522 20:21:58.178"/>
+</kw>
+<kw name="When Click Element" library="Selenium2Library">
+<arg>id=text-2</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.178" level="TRACE">Arguments: [ 'id=text-2' ]</msg>
+<msg timestamp="20210522 20:21:58.178" level="INFO">Clicking element 'id=text-2'.</msg>
+<msg timestamp="20210522 20:21:58.178" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-2\"]"}</msg>
+<msg timestamp="20210522 20:21:58.183" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.183" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.183" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/240e68e9-202f-46ae-be91-6daf34ed9094/click {"id": "240e68e9-202f-46ae-be91-6daf34ed9094"}</msg>
+<msg timestamp="20210522 20:21:58.207" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/240e68e9-202f-46ae-be91-6daf34ed9094/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.208" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.208" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.178" endtime="20210522 20:21:58.208"/>
+</kw>
+<kw name="Then Assert to-do-task 'id=text-1' should be display 'Test English'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:58.208" level="TRACE">Arguments: [ ${element}='id=text-1' | ${expeted}='Test English' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.209" level="TRACE">Arguments: [ 'id=text-1' ]</msg>
+<msg timestamp="20210522 20:21:58.209" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-1\"]"}</msg>
+<msg timestamp="20210522 20:21:58.213" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.213" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.213" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/302ebba4-57e1-4ed2-9fe2-54ea698af803/text {"id": "302ebba4-57e1-4ed2-9fe2-54ea698af803"}</msg>
+<msg timestamp="20210522 20:21:58.223" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/302ebba4-57e1-4ed2-9fe2-54ea698af803/text HTTP/1.1" 200 24</msg>
+<msg timestamp="20210522 20:21:58.223" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.223" level="TRACE">Return: 'Test English'</msg>
+<msg timestamp="20210522 20:21:58.223" level="INFO">${actual} = Test English</msg>
+<status status="PASS" starttime="20210522 20:21:58.209" endtime="20210522 20:21:58.223"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:58.224" level="TRACE">Arguments: [ 'Test English' | 'Test English' ]</msg>
+<msg timestamp="20210522 20:21:58.224" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:58.224" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.223" endtime="20210522 20:21:58.224"/>
+</kw>
+<msg timestamp="20210522 20:21:58.224" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.208" endtime="20210522 20:21:58.224"/>
+</kw>
+<kw name="And Click Link" library="Selenium2Library">
+<arg>Completed</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.224" level="TRACE">Arguments: [ 'Completed' ]</msg>
+<msg timestamp="20210522 20:21:58.224" level="INFO">Clicking link 'Completed'.</msg>
+<msg timestamp="20210522 20:21:58.224" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:58.227" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:58.227" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.227" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='Completed' or @name='Completed' or @href='Completed' or normalize-space(descendant-or-self::text())='Completed' or @href='https://abhigyank.github.io/To-Do-List/Completed')]"}</msg>
+<msg timestamp="20210522 20:21:58.235" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.235" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.235" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/5a4d7c2e-53f7-4afd-8c2d-d40d83132cc4/click {"id": "5a4d7c2e-53f7-4afd-8c2d-d40d83132cc4"}</msg>
+<msg timestamp="20210522 20:21:58.256" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/5a4d7c2e-53f7-4afd-8c2d-d40d83132cc4/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.256" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.256" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.224" endtime="20210522 20:21:58.256"/>
+</kw>
+<kw name="And Assert to-do-task '//*[@id='completed-tasks']//li//span' should be display 'done!@#$%'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:58.257" level="TRACE">Arguments: [ ${element}="//*[@id='completed-tasks']//li//span" | ${expeted}='done!@#$%' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.257" level="TRACE">Arguments: [ "//*[@id='completed-tasks']//li//span" ]</msg>
+<msg timestamp="20210522 20:21:58.257" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//*[@id='completed-tasks']//li//span"}</msg>
+<msg timestamp="20210522 20:21:58.264" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 248</msg>
+<msg timestamp="20210522 20:21:58.264" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.265" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/c971c4ed-2803-49d6-8922-1d9665cd1efc/text {"id": "c971c4ed-2803-49d6-8922-1d9665cd1efc"}</msg>
+<msg timestamp="20210522 20:21:58.273" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/c971c4ed-2803-49d6-8922-1d9665cd1efc/text HTTP/1.1" 200 21</msg>
+<msg timestamp="20210522 20:21:58.274" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.274" level="TRACE">Return: 'done!@#$%'</msg>
+<msg timestamp="20210522 20:21:58.274" level="INFO">${actual} = done!@#$%</msg>
+<status status="PASS" starttime="20210522 20:21:58.257" endtime="20210522 20:21:58.274"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:58.274" level="TRACE">Arguments: [ 'done!@#$%' | 'done!@#$%' ]</msg>
+<msg timestamp="20210522 20:21:58.274" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:58.274" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.274" endtime="20210522 20:21:58.275"/>
+</kw>
+<msg timestamp="20210522 20:21:58.275" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.257" endtime="20210522 20:21:58.275"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:58.153" endtime="20210522 20:21:58.275"/>
+</test>
+<test id="s1-s1-t6" name="Test delete completed tesk">
+<kw name="Given Click Link" library="Selenium2Library">
+<arg>To-Do Tasks</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.276" level="TRACE">Arguments: [ 'To-Do Tasks' ]</msg>
+<msg timestamp="20210522 20:21:58.276" level="INFO">Clicking link 'To-Do Tasks'.</msg>
+<msg timestamp="20210522 20:21:58.276" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:58.279" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:58.280" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.280" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='To-Do Tasks' or @name='To-Do Tasks' or @href='To-Do Tasks' or normalize-space(descendant-or-self::text())='To-Do Tasks' or @href='https://abhigyank.github.io/To-Do-List/To-Do Tasks')]"}</msg>
+<msg timestamp="20210522 20:21:58.284" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.284" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.284" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click {"id": "6a6b5db5-2d15-4d1c-be56-b598cc63ecf3"}</msg>
+<msg timestamp="20210522 20:21:58.298" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/6a6b5db5-2d15-4d1c-be56-b598cc63ecf3/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.298" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.298" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.276" endtime="20210522 20:21:58.298"/>
+</kw>
+<kw name="And Click Element" library="Selenium2Library">
+<arg>id=text-1</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.299" level="TRACE">Arguments: [ 'id=text-1' ]</msg>
+<msg timestamp="20210522 20:21:58.299" level="INFO">Clicking element 'id=text-1'.</msg>
+<msg timestamp="20210522 20:21:58.299" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "css selector", "value": "[id=\"text-1\"]"}</msg>
+<msg timestamp="20210522 20:21:58.305" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.305" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.305" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/302ebba4-57e1-4ed2-9fe2-54ea698af803/click {"id": "302ebba4-57e1-4ed2-9fe2-54ea698af803"}</msg>
+<msg timestamp="20210522 20:21:58.326" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/302ebba4-57e1-4ed2-9fe2-54ea698af803/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.326" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.327" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.299" endtime="20210522 20:21:58.327"/>
+</kw>
+<kw name="And Click Link" library="Selenium2Library">
+<arg>Completed</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.327" level="TRACE">Arguments: [ 'Completed' ]</msg>
+<msg timestamp="20210522 20:21:58.327" level="INFO">Clicking link 'Completed'.</msg>
+<msg timestamp="20210522 20:21:58.327" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url {}</msg>
+<msg timestamp="20210522 20:21:58.329" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/url HTTP/1.1" 200 51</msg>
+<msg timestamp="20210522 20:21:58.330" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.330" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//a[(@id='Completed' or @name='Completed' or @href='Completed' or normalize-space(descendant-or-self::text())='Completed' or @href='https://abhigyank.github.io/To-Do-List/Completed')]"}</msg>
+<msg timestamp="20210522 20:21:58.334" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.334" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.334" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/5a4d7c2e-53f7-4afd-8c2d-d40d83132cc4/click {"id": "5a4d7c2e-53f7-4afd-8c2d-d40d83132cc4"}</msg>
+<msg timestamp="20210522 20:21:58.347" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/5a4d7c2e-53f7-4afd-8c2d-d40d83132cc4/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.347" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.347" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.327" endtime="20210522 20:21:58.347"/>
+</kw>
+<kw name="When Click Element" library="Selenium2Library">
+<arg>//button[@id='1']</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.347" level="TRACE">Arguments: [ "//button[@id='1']" ]</msg>
+<msg timestamp="20210522 20:21:58.348" level="INFO">Clicking element '//button[@id='1']'.</msg>
+<msg timestamp="20210522 20:21:58.348" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//button[@id='1']"}</msg>
+<msg timestamp="20210522 20:21:58.352" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.352" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.352" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/f00ebbff-1907-44f4-ac6c-982c56e3af01/click {"id": "f00ebbff-1907-44f4-ac6c-982c56e3af01"}</msg>
+<msg timestamp="20210522 20:21:58.376" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/f00ebbff-1907-44f4-ac6c-982c56e3af01/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.376" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.376" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.347" endtime="20210522 20:21:58.376"/>
+</kw>
+<kw name="Then Assert to-do-task '//*[@id='completed-tasks']//li//span' should be display 'doneTest English'" library="todo_list_website_keywords" sourcename="Assert to-do-task '${element}' should be display '${expeted}'">
+<msg timestamp="20210522 20:21:58.377" level="TRACE">Arguments: [ ${element}="//*[@id='completed-tasks']//li//span" | ${expeted}='doneTest English' ]</msg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${actual}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20210522 20:21:58.377" level="TRACE">Arguments: [ "//*[@id='completed-tasks']//li//span" ]</msg>
+<msg timestamp="20210522 20:21:58.377" level="DEBUG">POST http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements {"using": "xpath", "value": "//*[@id='completed-tasks']//li//span"}</msg>
+<msg timestamp="20210522 20:21:58.381" level="DEBUG">http://127.0.0.1:58368 "POST /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20210522 20:21:58.382" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.382" level="DEBUG">GET http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/c9f385bf-3937-4b0a-a864-61e7627a30be/text {"id": "c9f385bf-3937-4b0a-a864-61e7627a30be"}</msg>
+<msg timestamp="20210522 20:21:58.390" level="DEBUG">http://127.0.0.1:58368 "GET /session/ab84623b1f4fb9d0168aa9ecc96bb9bf/element/c9f385bf-3937-4b0a-a864-61e7627a30be/text HTTP/1.1" 200 28</msg>
+<msg timestamp="20210522 20:21:58.391" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.391" level="TRACE">Return: 'doneTest English'</msg>
+<msg timestamp="20210522 20:21:58.391" level="INFO">${actual} = doneTest English</msg>
+<status status="PASS" starttime="20210522 20:21:58.377" endtime="20210522 20:21:58.391"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${actual}</arg>
+<arg>${expeted}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210522 20:21:58.391" level="TRACE">Arguments: [ 'doneTest English' | 'doneTest English' ]</msg>
+<msg timestamp="20210522 20:21:58.391" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210522 20:21:58.391" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.391" endtime="20210522 20:21:58.391"/>
+</kw>
+<msg timestamp="20210522 20:21:58.391" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.377" endtime="20210522 20:21:58.391"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:58.276" endtime="20210522 20:21:58.392"/>
+</test>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20210522 20:21:58.392" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210522 20:21:58.393" level="DEBUG">Closing browser with session id ab84623b1f4fb9d0168aa9ecc96bb9bf.</msg>
+<msg timestamp="20210522 20:21:58.393" level="DEBUG">DELETE http://127.0.0.1:58368/session/ab84623b1f4fb9d0168aa9ecc96bb9bf {}</msg>
+<msg timestamp="20210522 20:21:58.445" level="DEBUG">http://127.0.0.1:58368 "DELETE /session/ab84623b1f4fb9d0168aa9ecc96bb9bf HTTP/1.1" 200 14</msg>
+<msg timestamp="20210522 20:21:58.446" level="DEBUG">Finished Request</msg>
+<msg timestamp="20210522 20:21:58.460" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210522 20:21:58.392" endtime="20210522 20:21:58.461"/>
+</kw>
+<status status="PASS" starttime="20210522 20:21:53.626" endtime="20210522 20:21:58.461"/>
+</suite>
+<status status="PASS" starttime="20210522 20:21:53.599" endtime="20210522 20:21:58.465"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Todo List Website">Testcases.Todo List Website</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
